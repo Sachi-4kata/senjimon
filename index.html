@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Senjimon</title>
+	<script src = "./senjimonData.js"></script>
+	<script src = "./senjimonOnData.js"></script>
+	<script src = "./senjimonKunData.js"></script>
+	<script src = "./senjimonGame.js"></script>
+	<body>
+		<center>
+		<div class = "gameboard">
+			<canvas width = "500" height = "100" id="senji_stage" style="background-color: white;"></canvas>
+			<br>
+			<canvas width = "500" height = "50" id="on_stage" style="background-color: white;"></canvas>
+			<br>
+			<canvas width = "500" height = "50" id="kun_stage" style="background-color: white;"></canvas>
+		</div>
+		<br>
+		<input type = "number" id ="start" name = "start" min = "1" max = "250">
+		<label for ="start">句めから</label>
+		<input type = "number" id ="end" name = "end" min = "1" max = "250">
+		<label for ="end">句めまで</label>
+		<button onclick="draw();">スタート！</button>
+		</center>
+	</body>
+</html>
