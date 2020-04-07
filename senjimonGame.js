@@ -102,47 +102,37 @@ function draw() {
     kctx.clearRect(0, 0, 500, 50);
   }
 
-  let senjimon =  setInterval(function(){
-    fn0();
-    if(l>=1){
-      clearInterval(senjimon);
-  }}, 1);
+  if(st >= 250 || st < 0 || ed > 250 || ed < 1){
+    window.alert("1以上250以下の数を入力してください");
+  }else if(st>ed){
+    window.alert("二番目は一番目よりも小さな数を入力してください");
+  }else{
 
-  let hajimaruyo =  setInterval(function(){
-    fn1();
-    if(m>=1){
-      clearInterval(hajimaruyo);
-  }}, 1000);
+    let senjimon =  setInterval(function(){
+      fn0();
+      if(l>=1){
+        clearInterval(senjimon);
+    }}, 1);
 
-  let seno =  setInterval(function(){
-    fn2();
-    if(n>=1){
-      clearInterval(seno);
-  }}, 2000);
+    let hajimaruyo =  setInterval(function(){
+      fn1();
+      if(m>=1){
+        clearInterval(hajimaruyo);
+    }}, 1000);
 
-  let contents = setInterval(function(){
-    fn3();
-    st++;
-    if(st>ed){
-      clearInterval(contents);
-      fn4();
-  }}, tm1);
+    let seno =  setInterval(function(){
+      fn2();
+      if(n>=1){
+        clearInterval(seno);
+    }}, 2000);
 
-    
- /* let on = setInterval(function(){
-    fn4();
-    if(j>=250){
-      clearInterval(on);
-  }}, tm1);
+    let contents = setInterval(function(){
+      fn3();
+      st++;
+      if(st>ed){
+        clearInterval(contents);
+        fn4();
+    }}, tm1);
   
-  let kun = setInterval(function(){
-    fn5();
-    if(k>=250){
-      clearInterval(kun);
-  }}, tm1);
-
-  console.log(i);
-  console.log(j);
-  console.log(k);
- */
+  }
 }
